@@ -2,6 +2,8 @@ using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
 using Toybox.Position as Pos;
 using Toybox.ActivityRecording as Rec;
+using Toybox.Lang as Lang;
+using Toybox.System as Sys;
 
 class pmDuoApp extends App.AppBase {
 
@@ -25,7 +27,8 @@ class pmDuoApp extends App.AppBase {
 
     //! Return the initial view of your application here
     function getInitialView() {
-        return [ new pmDuoView(), new pmDuoDelegate(), new pmDuoInputDelegate() ];
+        //return [ new pmDuoView(), new pmDuoDelegate(), new pmDuoInputDelegate() ];
+		return [ new pmDuoView(), new pmDuoInputDelegate() ];
     }
     
     function onPosition(info) {
@@ -38,12 +41,12 @@ class pmDuoApp extends App.AppBase {
     	return false;
     }
     
-    function startSession(withName, withSport) {
+    function startSession() {
 		if( session != null ) {
 			stopSession();
 		}
-    	
-    	// No "switch" statement available?
+		
+		// No "switch" statement available?
     	if( step == 0 ) {
 			session = Rec.createSession( { :name=>"Duo:Cycle", :sport=>Rec.SPORT_CYCLING } );
 		} else if( step == 1 ) {
@@ -51,10 +54,14 @@ class pmDuoApp extends App.AppBase {
 		} else if( step == 2 ) {
    			session = Rec.createSession( { :name=>"Duo:Run", :sport=>Rec.SPORT_RUNNING } );
 		} else {
-   			session = Rec.createSession( { :name=>"Duo:Error", :sport=>Rec.SPORT_GENERIC } );
+   			session = null;
     	}
-    	session.start();
-    	Ui.requestUpdate();
+    	
+    	// Finished?
+    	if( session != null )
+    	{
+    		session.start();
+    	}
     }
     
     function stopSession() {
@@ -64,7 +71,6 @@ class pmDuoApp extends App.AppBase {
     	}
     	step++;
     	session = null;
-    	Ui.requestUpdate();
     }
     
     function getSessionStep() {
