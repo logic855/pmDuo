@@ -1,0 +1,4 @@
+<menu id="MainMenu">
+    <menu-item id="item_1">Restart</menu-item>
+    <menu-item id="item_2">Item 2</menu-item>
+</menu>
