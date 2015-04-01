@@ -1,56 +1,90 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <debugInfo>
 <pcToLineNum>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="17" pc="268435458" symbol="onKey"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="18" pc="268435485" symbol="onKey"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="30" pc="268435517" symbol="timercallback"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="37" pc="268435536" symbol="onLayout"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="38" pc="268435570" symbol="onLayout"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="50" pc="268435617" symbol="onUpdate"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="51" pc="268435653" symbol="onUpdate"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="52" pc="268435665" symbol="onUpdate"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="53" pc="268435725" symbol="onUpdate"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoMenuDelegate.mc" lineNum="7" pc="268435780" symbol="onMenuItem"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoMenuDelegate.mc" lineNum="8" pc="268435791" symbol="onMenuItem"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoMenuDelegate.mc" lineNum="10" pc="268435823" symbol="onMenuItem"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="17" pc="268435851" symbol="onStart"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="23" pc="268435898" symbol="onStop"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="25" pc="268435910" symbol="onStop"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="31" pc="268435957" symbol="getInitialView"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="38" pc="268436030" symbol="isSessionActive"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="39" pc="268436043" symbol="isSessionActive"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="41" pc="268436064" symbol="isSessionActive"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="45" pc="268436070" symbol="startSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="46" pc="268436083" symbol="startSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="50" pc="268436098" symbol="startSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="51" pc="268436115" symbol="startSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="53" pc="268436197" symbol="startSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="55" pc="268436279" symbol="startSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="57" pc="268436344" symbol="startSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="61" pc="268436353" symbol="startSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="63" pc="268436366" symbol="startSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="68" pc="268436390" symbol="stopSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="69" pc="268436426" symbol="stopSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="70" pc="268436444" symbol="stopSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="72" pc="268436465" symbol="stopSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="73" pc="268436484" symbol="stopSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="77" pc="268436496" symbol="getSessionStep"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="81" pc="268436508" symbol="getSession"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="10" pc="268437037" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="89" pc="268436521" symbol="onMenu"/>
-<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="90" pc="268436605" symbol="onMenu"/>
-<entry filename="Rez" lineNum="5" pc="268437164" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="13" pc="268436612" symbol="initialize"/>
-<entry filename="Rez" lineNum="14" pc="268436634" symbol="initialize"/>
-<entry filename="Rez" lineNum="21" pc="268437123" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="22" pc="268437132" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="31" pc="268436659" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="32" pc="268436673" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="33" pc="268436783" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="34" pc="268436798" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="35" pc="268436850" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="36" pc="268436938" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="37" pc="268436990" symbol="MainLayout"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="14" pc="268435458" symbol="onKey"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="15" pc="268435505" symbol="onKey"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="17" pc="268435523" symbol="onKey"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="18" pc="268435550" symbol="onKey"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="30" pc="268435582" symbol="timercallback"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="35" pc="268435601" symbol="onLayout"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="36" pc="268435635" symbol="onLayout"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="45" pc="268435682" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="46" pc="268435718" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="49" pc="268435730" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="50" pc="268435768" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="51" pc="268435806" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="52" pc="268435844" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="56" pc="268435882" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="57" pc="268435899" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="58" pc="268435923" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="60" pc="268435986" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="62" pc="268436025" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="64" pc="268436061" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="65" pc="268436099" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="69" pc="268436135" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="71" pc="268436135" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="72" pc="268436178" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="73" pc="268436386" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="75" pc="268436400" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="76" pc="268436443" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="77" pc="268436691" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="79" pc="268436705" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="80" pc="268436748" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="81" pc="268436956" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="83" pc="268436970" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="84" pc="268437049" symbol="onUpdate"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="93" pc="268437103" symbol="setChevronColour"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="94" pc="268437111" symbol="setChevronColour"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="96" pc="268437158" symbol="setChevronColour"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoView.mc" lineNum="98" pc="268437197" symbol="setChevronColour"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoMenuDelegate.mc" lineNum="8" pc="268437237" symbol="onMenuItem"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoMenuDelegate.mc" lineNum="9" pc="268437248" symbol="onMenuItem"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoMenuDelegate.mc" lineNum="11" pc="268437287" symbol="onMenuItem"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="20" pc="268437315" symbol="onStart"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="26" pc="268437362" symbol="onStop"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="28" pc="268437374" symbol="onStop"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="34" pc="268437421" symbol="getInitialView"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="41" pc="268437494" symbol="isSessionActive"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="42" pc="268437507" symbol="isSessionActive"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="44" pc="268437528" symbol="isSessionActive"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="49" pc="268437534" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="50" pc="268437547" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="54" pc="268437562" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="57" pc="268437581" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="58" pc="268437598" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="59" pc="268437621" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="60" pc="268437634" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="62" pc="268437719" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="63" pc="268437732" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="65" pc="268437817" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="66" pc="268437830" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="68" pc="268437898" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="70" pc="268437907" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="73" pc="268437930" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="75" pc="268437943" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="76" pc="268438003" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="78" pc="268438021" symbol="startSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="83" pc="268438045" symbol="stopSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="84" pc="268438081" symbol="stopSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="85" pc="268438099" symbol="stopSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="87" pc="268438120" symbol="stopSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="91" pc="268438132" symbol="cancelSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="92" pc="268438168" symbol="cancelSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="94" pc="268438189" symbol="cancelSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="98" pc="268438201" symbol="getSessionStep"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="102" pc="268438213" symbol="getSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="106" pc="268438225" symbol="restartSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="107" pc="268438237" symbol="restartSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="108" pc="268438254" symbol="restartSession"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="113" pc="268438279" symbol="restartEvent"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="114" pc="268438291" symbol="restartEvent"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="11" pc="268438463" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="122" pc="268438308" symbol="onMenu"/>
+<entry filename="C:\\Marq.Stuff\\Dev.GitHub\\connectiq-sdk-win-1.1.0\\workspace\\pmDuo\\source\\pmDuoApp.mc" lineNum="123" pc="268438392" symbol="onMenu"/>
+<entry filename="Rez" lineNum="5" pc="268438581" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="13" pc="268438399" symbol="initialize"/>
+<entry filename="Rez" lineNum="14" pc="268438421" symbol="initialize"/>
+<entry filename="Rez" lineNum="21" pc="268438549" symbol="&lt;init&gt;"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8389359" symbol="&lt;gre&gt;"/>
@@ -88,7 +122,9 @@
 <entry id="2" module="true" symbol="globals_Rez"/>
 <entry field="true" id="8389002" symbol="KEY_RIGHT"/>
 <entry field="true" id="8389163" symbol="COLOR_ORANGE"/>
+<entry id="33" method="true" symbol="setChevronColour"/>
 <entry id="8388662" method="true" symbol="testContinue"/>
+<entry field="true" id="16" symbol="sessionname"/>
 <entry field="true" id="8389149" symbol="restingHeartRate"/>
 <entry id="8388644" module="true" symbol="System"/>
 <entry field="true" id="8388876" symbol="SUB_SPORT_CARDIO_TRAINING"/>
@@ -96,7 +132,7 @@
 <entry id="8389358" symbol="&lt;deu&gt;"/>
 <entry field="true" id="8388807" symbol="BLE_REQUEST_TOO_LARGE"/>
 <entry id="8388819" method="true" symbol="makeImageRequest"/>
-<entry id="20" module="true" symbol="Menus"/>
+<entry id="26" module="true" symbol="Menus"/>
 <entry id="3" module="true" symbol="globals_Rez_Drawables"/>
 <entry id="8388630" module="true" symbol="Toybox_Position"/>
 <entry id="8389354" symbol="&lt;dut&gt;"/>
@@ -141,7 +177,7 @@
 <entry id="8388659" method="true" symbol="testAbs"/>
 <entry field="true" id="8388989" symbol="dutyCycle"/>
 <entry id="8389043" object="true" symbol="ProgressBar"/>
-<entry field="true" id="26" symbol="AppName"/>
+<entry field="true" id="30" symbol="AppName"/>
 <entry field="true" id="8388927" symbol="SECONDS_PER_YEAR"/>
 <entry id="8389418" object="true" symbol="CommonData"/>
 <entry id="8389114" method="true" symbol="getType"/>
@@ -157,7 +193,7 @@
 <entry id="8389184" method="true" symbol="drawLine"/>
 <entry id="8389250" symbol="timestamp"/>
 <entry id="8388877" method="true" symbol="createSession"/>
-<entry field="true" id="22" symbol="LauncherIcon"/>
+<entry field="true" id="28" symbol="LauncherIcon"/>
 <entry id="8388616" module="true" symbol="Toybox_Communications"/>
 <entry field="true" id="8389380" symbol="OBSCURE_TOP"/>
 <entry field="true" id="8389201" symbol="MSG_ID_SEARCH_TIMEOUT"/>
@@ -182,7 +218,7 @@
 <entry field="true" id="8389503" symbol="pedalPowerPercent"/>
 <entry field="true" id="8388963" symbol="altitude"/>
 <entry field="true" id="8389200" symbol="MSG_ID_CHANNEL_PERIOD"/>
-<entry id="28" method="true" symbol="timercallback"/>
+<entry id="32" method="true" symbol="timercallback"/>
 <entry id="8389463" object="true" symbol="WeightScaleUserProfile"/>
 <entry id="8389190" method="true" symbol="drawText"/>
 <entry id="8389105" symbol="mBitmapData"/>
@@ -192,7 +228,6 @@
 <entry id="8389468" symbol="DEVICE_TYPE_GEOCACHE"/>
 <entry id="8" object="true" symbol="pmDuoInputDelegate"/>
 <entry field="true" id="8388848" symbol="SPORT_MULTISPORT"/>
-<entry id="30" symbol="restartDuathlon"/>
 <entry field="true" id="8388804" symbol="BLE_NO_DATA"/>
 <entry field="true" id="8388892" symbol="name"/>
 <entry id="8388895" method="true" symbol="acos"/>
@@ -265,12 +300,13 @@
 <entry field="true" id="8389417" symbol="BATT_STATUS_CNT"/>
 <entry id="8388759" object="true" symbol="Long"/>
 <entry id="8388945" method="true" symbol="lessThan"/>
+<entry id="25" method="true" symbol="restartEvent"/>
 <entry field="true" id="8389239" symbol="DATA_PAYLOAD_LENGTH"/>
 <entry field="true" id="8388976" symbol="TONE_LAP"/>
 <entry id="8389142" method="true" symbol="getProfile"/>
 <entry id="8389188" method="true" symbol="fillRectangle"/>
 <entry id="8388729" object="true" symbol="Info"/>
-<entry id="21" module="true" symbol="Layouts"/>
+<entry id="27" module="true" symbol="Layouts"/>
 <entry id="8388710" object="true" symbol="Stats"/>
 <entry field="true" id="8389152" symbol="FONT_XTINY"/>
 <entry id="8389189" method="true" symbol="fillRoundedRectangle"/>
@@ -303,6 +339,7 @@
 <entry id="8389329" symbol="november"/>
 <entry id="8389325" symbol="july"/>
 <entry field="true" id="8388959" symbol="cadence"/>
+<entry id="21" method="true" symbol="cancelSession"/>
 <entry id="8388650" object="true" symbol="Dictionary"/>
 <entry id="8388627" module="true" symbol="Toybox_Graphics"/>
 <entry id="8388767" object="true" symbol="Method"/>
@@ -340,7 +377,7 @@
 <entry field="true" id="8389519" symbol="torque"/>
 <entry field="true" id="8389529" symbol="userProfileSelected"/>
 <entry field="true" id="8389039" symbol="NUMBER_PICKER_CALORIES"/>
-<entry id="17" method="true" symbol="stopSession"/>
+<entry id="20" method="true" symbol="stopSession"/>
 <entry id="8389541" method="true" symbol="onCancel"/>
 <entry field="true" id="8388968" symbol="TONE_STOP"/>
 <entry field="true" id="8389509" symbol="wheelSpeed"/>
@@ -356,6 +393,7 @@
 <entry id="8389435" object="true" symbol="CalculatedWheelDistance"/>
 <entry field="true" id="8389442" symbol="WEIGHT_SCALE_GENDER_FEMALE"/>
 <entry field="true" id="8388911" symbol="distance"/>
+<entry field="true" id="14" symbol="eventstart"/>
 <entry id="8389391" method="true" symbol="testArray"/>
 <entry field="true" id="8388724" symbol="battery"/>
 <entry id="8388948" method="true" symbol="multiply"/>
@@ -433,7 +471,7 @@
 <entry id="8389281" method="true" symbol="onStop"/>
 <entry field="true" id="8389429" symbol="BIKE_POWER_SENSOR_TYPE_CRANK_TORQUE"/>
 <entry field="true" id="8389385" symbol="FONT_NUMBER_MILD"/>
-<entry id="18" method="true" symbol="getSessionStep"/>
+<entry id="22" method="true" symbol="getSessionStep"/>
 <entry id="8388789" method="true" symbol="get"/>
 <entry id="8389465" object="true" symbol="WeightScaleAdvancedReading"/>
 <entry id="8389334" symbol="wednesday"/>
@@ -454,11 +492,11 @@
 <entry field="true" id="8389524" symbol="swRevisionSupplemental"/>
 <entry field="true" id="8388851" symbol="SUB_SPORT_TREADMILL"/>
 <entry id="8389398" method="true" symbol="getDeviceSettings"/>
-<entry id="31" symbol="item_2"/>
-<entry id="29" symbol="item_1"/>
+<entry id="35" symbol="item_2"/>
+<entry id="34" symbol="item_1"/>
 <entry field="true" id="8389238" symbol="network"/>
 <entry id="8388639" module="true" symbol="Graphics"/>
-<entry id="19" method="true" symbol="getSession"/>
+<entry id="23" method="true" symbol="getSession"/>
 <entry field="true" id="8389502" symbol="rightPedalIndicator"/>
 <entry field="true" id="8388816" symbol="NETWORK_RESPONSE_TOO_LARGE"/>
 <entry field="true" id="8389395" symbol="UNIT_METRIC"/>
@@ -475,7 +513,7 @@
 <entry id="8389285" method="true" symbol="clearProperties"/>
 <entry field="true" id="8388834" symbol="SPORT_FITNESS_EQUIPMENT"/>
 <entry id="8389369" symbol="&lt;spa&gt;"/>
-<entry id="24" object="true" symbol="MainMenu"/>
+<entry id="29" object="true" symbol="MainMenu"/>
 <entry id="8388788" method="true" symbol="put"/>
 <entry id="8389537" object="true" symbol="TextPicker"/>
 <entry id="8389183" method="true" symbol="drawBitmap"/>
@@ -512,7 +550,7 @@
 <entry id="8389135" symbol="mKey"/>
 <entry field="true" id="8388703" symbol="callbackCalled"/>
 <entry id="8388706" method="true" symbol="insertString"/>
-<entry field="true" id="27" symbol="refreshtimer"/>
+<entry field="true" id="31" symbol="refreshtimer"/>
 <entry field="true" id="8388993" symbol="KEY_ZOUT"/>
 <entry field="true" id="8389311" symbol="accuracy"/>
 <entry field="true" id="8389218" symbol="MSG_CODE_EVENT_TX"/>
@@ -752,7 +790,7 @@
 <entry field="true" id="8388739" symbol="averageSpeed"/>
 <entry field="true" id="8388754" symbol="swimSwolf"/>
 <entry id="8388794" method="true" symbol="values"/>
-<entry id="15" method="true" symbol="isSessionActive"/>
+<entry id="18" method="true" symbol="isSessionActive"/>
 <entry id="8389059" object="true" symbol="Bitmap"/>
 <entry id="8388785" symbol="mHigh"/>
 <entry id="8389424" object="true" symbol="DeviceState"/>
@@ -765,7 +803,6 @@
 <entry field="true" id="8388812" symbol="INVALID_HTTP_METHOD_IN_REQUEST"/>
 <entry id="8389182" method="true" symbol="drawRoundedRectangle"/>
 <entry field="true" id="8389297" symbol="QUALITY_GOOD"/>
-<entry id="25" method="true" symbol="MainLayout"/>
 <entry field="true" id="8389472" symbol="rightTorqueEffectiveness"/>
 <entry field="true" id="8389228" symbol="MSG_CODE_EVENT_QUE_OVERFLOW"/>
 <entry field="true" id="8388832" symbol="SPORT_CYCLING"/>
@@ -787,6 +824,7 @@
 <entry id="8389133" method="true" symbol="setJustification"/>
 <entry field="true" id="8388966" symbol="TONE_KEY"/>
 <entry id="8389511" method="true" symbol="getCalculatedCrankCadence"/>
+<entry id="24" method="true" symbol="restartSession"/>
 <entry field="true" id="8389220" symbol="MSG_CODE_EVENT_TRANSFER_TX_COMPLETED"/>
 <entry field="true" id="8389294" symbol="QUALITY_LAST_KNOWN"/>
 <entry id="8389258" method="true" symbol="release"/>
@@ -816,7 +854,7 @@
 <entry field="true" id="8388733" symbol="timerTime"/>
 <entry field="true" id="8388755" symbol="swimEfficency"/>
 <entry id="8388935" method="true" symbol="duration"/>
-<entry id="14" method="true" symbol="onPosition"/>
+<entry id="17" method="true" symbol="onPosition"/>
 <entry field="true" id="8389263" symbol="DEFAULT_DEVICE_TYPE"/>
 <entry id="8388728" method="true" symbol="getActivityInfo"/>
 <entry field="true" id="8388751" symbol="averageCadence"/>
@@ -841,7 +879,8 @@
 <entry id="8388670" method="true" symbol="testShiftL"/>
 <entry id="8388658" method="true" symbol="testSubstringAndFind"/>
 <entry id="8389488" symbol="DEVICE_TYPE_WEIGHT_SCALE"/>
-<entry id="16" method="true" symbol="startSession"/>
+<entry field="true" id="15" symbol="sessionstart"/>
+<entry id="19" method="true" symbol="startSession"/>
 <entry id="8389179" method="true" symbol="drawEllipse"/>
 <entry field="true" id="8389379" symbol="OBSCURE_LEFT"/>
 <entry id="8388820" object="true" symbol="MailboxIterator"/>
@@ -914,7 +953,6 @@
 <entry id="8389195" symbol="mDrawContext"/>
 <entry field="true" id="8389196" symbol="MSG_ID_RF_EVENT"/>
 <entry field="true" id="8389457" symbol="WEIGHT_SCALE_STATUS_SEARCH_TIMEOUT"/>
-<entry field="true" id="23" symbol="id_monkey"/>
 <entry id="8389123" method="true" symbol="onShow"/>
 <entry field="true" id="8389273" symbol="searchTimeoutHighPriority"/>
 <entry id="8389253" symbol="setPayloadWithOffset"/>
@@ -1032,6 +1070,12 @@
 <functionEntry name="onHide">
 <documentation><![CDATA[<div class="description"> Called when this View is removed from the screen. Save the<br/> state of your app here.<br/></div>]]></documentation>
 </functionEntry>
+<functionEntry name="setChevronColour">
+<param id="dc"/>
+<param id="step"/>
+<param id="chevron"/>
+<documentation/>
+</functionEntry>
 <functionEntry name="onMenuItem">
 <param id="item"/>
 <documentation/>
@@ -1058,10 +1102,19 @@
 <functionEntry name="stopSession">
 <documentation/>
 </functionEntry>
+<functionEntry name="cancelSession">
+<documentation/>
+</functionEntry>
 <functionEntry name="getSessionStep">
 <documentation/>
 </functionEntry>
 <functionEntry name="getSession">
+<documentation/>
+</functionEntry>
+<functionEntry name="restartSession">
+<documentation/>
+</functionEntry>
+<functionEntry name="restartEvent">
 <documentation/>
 </functionEntry>
 <functionEntry name="onMenu">
@@ -1069,10 +1122,6 @@
 </functionEntry>
 <functionEntry name="initialize">
 <documentation/>
-</functionEntry>
-<functionEntry name="MainLayout">
-<param id="dc"/>
-<documentation><![CDATA[<div class="description"> Draw the layout<br/> param The context<br/></div>]]></documentation>
 </functionEntry>
 </functions>
 </debugInfo>

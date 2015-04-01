@@ -4,12 +4,15 @@ using Toybox.Position as Pos;
 using Toybox.ActivityRecording as Rec;
 using Toybox.Lang as Lang;
 using Toybox.System as Sys;
+using Toybox.Timer as Timer;
 
 class pmDuoApp extends App.AppBase {
 
 	var session = null;
 	var step = 0;
-
+	var eventstart;
+	var sessionstart;
+	var sessionname;
 
     //! onStart() is called on application start up
     function onStart() {
@@ -27,7 +30,7 @@ class pmDuoApp extends App.AppBase {
 
     //! Return the initial view of your application here
     function getInitialView() {
-        //return [ new pmDuoView(), new pmDuoDelegate(), new pmDuoInputDelegate() ];
+        // return [ new pmDuoView(), new pmDuoDelegate(), new pmDuoInputDelegate() ];
 		return [ new pmDuoView(), new pmDuoInputDelegate() ];
     }
     
@@ -42,24 +45,36 @@ class pmDuoApp extends App.AppBase {
     }
     
     function startSession() {
+    
 		if( session != null ) {
 			stopSession();
 		}
 		
+		// Set New Step
+		step++;
+		
 		// No "switch" statement available?
-    	if( step == 0 ) {
-			session = Rec.createSession( { :name=>"Duo:Cycle", :sport=>Rec.SPORT_CYCLING } );
-		} else if( step == 1 ) {
-   			session = Rec.createSession( { :name=>"Duo:Trans", :sport=>Rec.SPORT_TRANSITION } );
+    	if( step == 1 ) {
+    		eventstart = Sys.getTimer();
+    		sessionname = "Duo:Cycle";
+			session = Rec.createSession( { :name=>sessionname, :sport=>Rec.SPORT_CYCLING } );
 		} else if( step == 2 ) {
-   			session = Rec.createSession( { :name=>"Duo:Run", :sport=>Rec.SPORT_RUNNING } );
+			sessionname = "Duo:Trans";
+   			session = Rec.createSession( { :name=>sessionname, :sport=>Rec.SPORT_TRANSITION } );
+		} else if( step == 3 ) {
+			sessionname = "Duo:Run";
+   			session = Rec.createSession( { :name=>sessionname, :sport=>Rec.SPORT_RUNNING } );
 		} else {
    			session = null;
     	}
+    	sessionstart = Sys.getTimer();
     	
     	// Finished?
     	if( session != null )
     	{
+			var keynum = Lang.format("Starting $1$ ($2$)", [sessionname, step]);
+			Sys.println(keynum);
+
     		session.start();
     	}
     }
@@ -69,7 +84,13 @@ class pmDuoApp extends App.AppBase {
     		session.stop();
     		session.save();
     	}
-    	step++;
+    	session = null;
+    }
+    
+    function cancelSession() {
+    	if( session != null && session.isRecording() ) {
+    		session.stop();
+    	}
     	session = null;
     }
     
@@ -79,6 +100,18 @@ class pmDuoApp extends App.AppBase {
 
     function getSession() {
     	return session;
+    }
+    
+    function restartSession() {
+    	cancelSession();
+    	if( step > 0 ) {
+    		step--;
+    	}
+    }
+    
+    function restartEvent() {
+    	cancelSession();
+   		step = 0;
     }
 
 }
