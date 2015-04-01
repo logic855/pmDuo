@@ -2,4 +2,10 @@
     <string id="AppName">pmDuo</string>
 
     <bitmap id="LauncherIcon" filename="images/launcher_icon.png" />
+    <bitmap id="CycleIcon" filename="images/cycle.png" />
+    <bitmap id="RunIcon" filename="images/run.png" />
+    <bitmap id="TransIcon" filename="images/transistion.png" />
+    <bitmap id="StartIcon" filename="images/start.png" />
+    <bitmap id="FinishIcon" filename="images/finish.png" />
+    
 </resources>

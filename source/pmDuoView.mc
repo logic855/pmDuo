@@ -33,7 +33,7 @@ class pmDuoView extends Ui.View {
     //! Load your resources here
     function onLayout(dc) {
 		refreshtimer = new Timer.Timer();
-		refreshtimer.start( method(:timercallback), 500, true );
+		refreshtimer.start( method(:timercallback), 1000, true );
     }
 
     //! Restore the state of the app and prepare the view to be shown
@@ -42,14 +42,17 @@ class pmDuoView extends Ui.View {
 
     //! Update the view
     function onUpdate(dc) {
-		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLACK);
+		dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_BLACK);
 		dc.clear();
 		
+		dc.drawBitmap(2, 2, App.getApp().getSessionIcon());
+		
 		// Draw seperators
-		dc.drawLine(  0,  50, dc.getWidth(),  50 );
-		dc.drawLine(  0,  68, dc.getWidth(),  68 );
-		dc.drawLine(  0,  74, dc.getWidth(),  74 );
-		dc.drawLine(  0, 108, dc.getWidth(), 108 );
+		dc.drawLine(  0,  34, dc.getWidth(),  34 );
+		dc.drawLine(  0,  39, dc.getWidth(),  39 );
+		dc.drawLine(  0,  52, dc.getWidth(),  52 );
+		dc.drawLine(  0,  84, dc.getWidth(),  84 );
+		dc.drawLine(  0, 116, dc.getWidth(), 116 );
 		
 		
 		// Draw GPS Status
@@ -61,27 +64,31 @@ class pmDuoView extends Ui.View {
 		} else {
 			dc.setColor(Gfx.COLOR_DK_RED, Gfx.COLOR_BLACK);
 		}
-		dc.fillRectangle(0, 69, dc.getWidth(), 5);
-		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-		// dc.drawText( dc.getWidth() / 2, 64, Gfx.FONT_XTINY, "GPS", Gfx.TEXT_JUSTIFY_CENTER );
+		dc.fillRectangle(0, 35, dc.getWidth(), 3);
 		
 		// Draw event segments
 		var poly;
-		
+		var segwidth = dc.getWidth() / 5;
 		setChevronColour( dc, App.getApp().getSessionStep(), 1 );
-		poly = [ [0, 51], [70, 51], [78, 59], [70, 67], [0, 67] ];
+		poly = [ [0, 40], [(segwidth * 2) - 4, 40], [(segwidth * 2) + 2, 46], [(segwidth * 2) - 4, 52], [0, 52] ];
 		dc.fillPolygon(poly);
-		
 		setChevronColour( dc, App.getApp().getSessionStep(), 2 );
-		poly = [ [72, 51], [124, 51], [132, 59], [124, 67], [72, 67], [80, 59] ];
+		poly = [ [(segwidth * 2) - 2, 40], [(segwidth * 3) - 4, 40], [(segwidth * 3) + 2, 46], [(segwidth * 3) - 4, 52], [(segwidth * 2) - 2, 52], [(segwidth * 2) + 4, 46] ];
 		dc.fillPolygon(poly);
-		
 		setChevronColour( dc, App.getApp().getSessionStep(), 3 );
-		poly = [ [126, 51], [205, 51], [205, 67], [126, 67], [134, 59] ];
+		poly = [ [(segwidth * 3) - 2, 40], [dc.getWidth(), 40], [dc.getWidth(), 52], [(segwidth * 3) - 2, 52], [(segwidth * 3) + 4, 46] ];
 		dc.fillPolygon(poly);
 		
-		var stepNum = Lang.format("$1$, $2$", [App.getApp().getSessionStep(), dc.getHeight()]); // [App.getApp().getSessionStep()]);
-        dc.drawText(10, 100, Gfx.FONT_LARGE, stepNum, Gfx.TEXT_JUSTIFY_LEFT);
+		// Draw Data
+		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+		
+		dc.drawText(40, 2, Gfx.FONT_MEDIUM, "Event:", Gfx.TEXT_JUSTIFY_LEFT);
+        dc.drawText(dc.getWidth() - 2, 2, Gfx.FONT_MEDIUM, App.getApp().getEventTime(), Gfx.TEXT_JUSTIFY_RIGHT);
+
+		dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+		dc.drawText(2, 57, Gfx.FONT_SMALL, "Discipline:", Gfx.TEXT_JUSTIFY_LEFT);
+        dc.drawText(dc.getWidth() - 2, 54, Gfx.FONT_MEDIUM, App.getApp().getSessionTime(), Gfx.TEXT_JUSTIFY_RIGHT);
+
     }
 
     //! Called when this View is removed from the screen. Save the
