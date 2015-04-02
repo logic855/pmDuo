@@ -113,10 +113,19 @@ class pmDuoView extends Ui.View {
     }
     
     function convertDistance(metres) {
+    	var result;
+    	
     	if( metres == null ) {
     		return 0;
     	}
-    	return metres;
+    	
+    	if( Sys.getDeviceSettings().distanceUnits == UNIT_METRIC ) {
+    		result = metres / 1000.0;
+    	} else {
+    		result = metres / 1609.34;
+    	}
+    	
+    	return Lang.format("$1$", [result.format("%.2f")]);
     }
 
     //! Called when this View is removed from the screen. Save the
