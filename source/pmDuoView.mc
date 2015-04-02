@@ -95,35 +95,42 @@ class pmDuoView extends Ui.View {
 		if( activity != null ) {
 			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
 			dc.drawText(2, 89, Gfx.FONT_SMALL, "Pace:", Gfx.TEXT_JUSTIFY_LEFT);
-	        dc.drawText(dc.getWidth() - 2, 86, Gfx.FONT_MEDIUM, Lang.format("$1$", [convertSpeedToPace(activity.currentSpeed)]), Gfx.TEXT_JUSTIFY_RIGHT);
+	        dc.drawText(dc.getWidth() - 2, 86, Gfx.FONT_MEDIUM, convertSpeedToPace(activity.currentSpeed), Gfx.TEXT_JUSTIFY_RIGHT);
 
 			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
 			dc.drawText(2, 121, Gfx.FONT_SMALL, "Distance:", Gfx.TEXT_JUSTIFY_LEFT);
-	        dc.drawText(dc.getWidth() - 2, 118, Gfx.FONT_MEDIUM, Lang.format("$1$", [convertDistance(activity.elapsedDistance)]), Gfx.TEXT_JUSTIFY_RIGHT);
+	        dc.drawText(dc.getWidth() - 2, 118, Gfx.FONT_MEDIUM, convertDistance(activity.elapsedDistance), Gfx.TEXT_JUSTIFY_RIGHT);
 		} 
 
     }
     
     function convertSpeedToPace(speed) {
-    	// Speed = m/s; DeviceSettings.paceUnits == UNIT_METRIC or UNIT_STATUTE
+    	var result;
+    	
 		if( speed == null ) {
-			return 0;
+			result = 0;
+		} else {
+			// Speed = m/s; DeviceSettings.paceUnits == UNIT_METRIC or UNIT_STATUTE
+			result = speed;
 		}
-    	return speed;
+		
+    	return Lang.format("$1$", [result.format("%.2f")]);
     }
     
     function convertDistance(metres) {
     	var result;
     	
     	if( metres == null ) {
-    		return 0;
-    	}
-    	
-    	if( Sys.getDeviceSettings().distanceUnits == UNIT_METRIC ) {
-    		result = metres / 1000.0;
+    		result = 0;
     	} else {
-    		result = metres / 1609.34;
-    	}
+	    	
+	    	if( Sys.getDeviceSettings().distanceUnits == UNIT_METRIC ) {
+	    		result = metres / 1000.0;
+	    	} else {
+	    		result = metres / 1609.34;
+	    	}
+	    	
+	    }
     	
     	return Lang.format("$1$", [result.format("%.2f")]);
     }
