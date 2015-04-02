@@ -2,6 +2,7 @@ using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.Lang as Lang;
+using Toybox.Activity as Act;
 using Toybox.ActivityRecording as Rec;
 using Toybox.Position as Pos;
 using Toybox.System as Sys;
@@ -89,6 +90,33 @@ class pmDuoView extends Ui.View {
 		dc.drawText(2, 57, Gfx.FONT_SMALL, "Discipline:", Gfx.TEXT_JUSTIFY_LEFT);
         dc.drawText(dc.getWidth() - 2, 54, Gfx.FONT_MEDIUM, App.getApp().getSessionTime(), Gfx.TEXT_JUSTIFY_RIGHT);
 
+		var activity = Act.getActivityInfo();
+		var acttxt = "";
+		if( activity != null ) {
+			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+			dc.drawText(2, 89, Gfx.FONT_SMALL, "Pace:", Gfx.TEXT_JUSTIFY_LEFT);
+	        dc.drawText(dc.getWidth() - 2, 86, Gfx.FONT_MEDIUM, Lang.format("$1$", [convertSpeedToPace(activity.currentSpeed)]), Gfx.TEXT_JUSTIFY_RIGHT);
+
+			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+			dc.drawText(2, 121, Gfx.FONT_SMALL, "Distance:", Gfx.TEXT_JUSTIFY_LEFT);
+	        dc.drawText(dc.getWidth() - 2, 118, Gfx.FONT_MEDIUM, Lang.format("$1$", [convertDistance(activity.elapsedDistance)]), Gfx.TEXT_JUSTIFY_RIGHT);
+		} 
+
+    }
+    
+    function convertSpeedToPace(speed) {
+    	// Speed = m/s; DeviceSettings.paceUnits == UNIT_METRIC or UNIT_STATUTE
+		if( speed == null ) {
+			return 0;
+		}
+    	return speed;
+    }
+    
+    function convertDistance(metres) {
+    	if( metres == null ) {
+    		return 0;
+    	}
+    	return metres;
     }
 
     //! Called when this View is removed from the screen. Save the
