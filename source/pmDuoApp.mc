@@ -15,6 +15,9 @@ class pmDuoApp extends App.AppBase {
 	var sessionstart = 0;
 	var sessionname;
 	var sessionicon;
+	
+	var currentspeed;
+	var currentdistance;
 
     //! onStart() is called on application start up
     function onStart() {
@@ -38,6 +41,16 @@ class pmDuoApp extends App.AppBase {
     }
     
     function onPosition(info) {
+    	//currentspeed = info.position.currentSpeed;
+    	//currentdistance = info.position.elapsedDistance;
+    }
+    
+    function getSessionSpeed() {
+    	return currentspeed;
+    }
+    
+    function getSessionDistance() {
+    	return currentdistance;
     }
     
     function isSessionActive() {

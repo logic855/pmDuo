@@ -58,10 +58,12 @@ class pmDuoView extends Ui.View {
 		
 		// Draw GPS Status
 		var gpsinfo = Pos.getInfo();
+		var gpsIsOkay = ( gpsinfo.accuracy == Pos.QUALITY_GOOD || gpsinfo.accuracy == Pos.QUALITY_USABLE );
+		
 		if( gpsinfo.accuracy == Pos.QUALITY_GOOD ) {
 			dc.setColor(Gfx.COLOR_DK_GREEN, Gfx.COLOR_BLACK);
 		} else if( gpsinfo.accuracy == Pos.QUALITY_USABLE ) {
-			dc.setColor(Gfx.COLOR_DK_BLUE, Gfx.COLOR_BLACK);
+			dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_BLACK);
 		} else {
 			dc.setColor(Gfx.COLOR_DK_RED, Gfx.COLOR_BLACK);
 		}
@@ -90,17 +92,24 @@ class pmDuoView extends Ui.View {
 		dc.drawText(2, 57, Gfx.FONT_SMALL, "Discipline:", Gfx.TEXT_JUSTIFY_LEFT);
         dc.drawText(dc.getWidth() - 2, 54, Gfx.FONT_MEDIUM, App.getApp().getSessionTime(), Gfx.TEXT_JUSTIFY_RIGHT);
 
-		var activity = Act.getActivityInfo();
-		var acttxt = "";
-		if( activity != null ) {
+		if( App.getApp().isSessionActive() ) {
+
+			var cursession = App.getApp().getSession();
 			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
 			dc.drawText(2, 89, Gfx.FONT_SMALL, "Pace:", Gfx.TEXT_JUSTIFY_LEFT);
-	        dc.drawText(dc.getWidth() - 2, 86, Gfx.FONT_MEDIUM, convertSpeedToPace(activity.currentSpeed), Gfx.TEXT_JUSTIFY_RIGHT);
+	        //dc.drawText(dc.getWidth() - 2, 86, Gfx.FONT_MEDIUM, convertSpeedToPace(cursession.currentSpeed), Gfx.TEXT_JUSTIFY_RIGHT);
 
 			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
 			dc.drawText(2, 121, Gfx.FONT_SMALL, "Distance:", Gfx.TEXT_JUSTIFY_LEFT);
-	        dc.drawText(dc.getWidth() - 2, 118, Gfx.FONT_MEDIUM, convertDistance(activity.elapsedDistance), Gfx.TEXT_JUSTIFY_RIGHT);
-		} 
+	        //dc.drawText(dc.getWidth() - 2, 118, Gfx.FONT_MEDIUM, convertDistance(cursession.elapsedDistance), Gfx.TEXT_JUSTIFY_RIGHT);
+		}
+		
+		if( !gpsIsOkay ) {
+			// Draw "Wait for GPS"
+			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+	        dc.drawText(dc.getWidth() / 2, 86, Gfx.FONT_MEDIUM, "Please Wait", Gfx.TEXT_JUSTIFY_CENTER);
+	        dc.drawText(dc.getWidth() / 2, 118, Gfx.FONT_MEDIUM, "For GPS", Gfx.TEXT_JUSTIFY_CENTER);
+		}
 
     }
     
