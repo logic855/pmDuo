@@ -94,14 +94,20 @@ class pmDuoView extends Ui.View {
 
 		if( App.getApp().isSessionActive() ) {
 
-			var cursession = App.getApp().getSession();
-			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
-			dc.drawText(2, 89, Gfx.FONT_SMALL, "Pace:", Gfx.TEXT_JUSTIFY_LEFT);
-	        //dc.drawText(dc.getWidth() - 2, 86, Gfx.FONT_MEDIUM, convertSpeedToPace(cursession.currentSpeed), Gfx.TEXT_JUSTIFY_RIGHT);
-
-			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
-			dc.drawText(2, 121, Gfx.FONT_SMALL, "Distance:", Gfx.TEXT_JUSTIFY_LEFT);
-	        //dc.drawText(dc.getWidth() - 2, 118, Gfx.FONT_MEDIUM, convertDistance(cursession.elapsedDistance), Gfx.TEXT_JUSTIFY_RIGHT);
+			var cursession = Act.getActivityInfo();
+			if( cursession == null ) {
+				dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+		        dc.drawText(dc.getWidth() / 2, 86, Gfx.FONT_MEDIUM, "No Activity", Gfx.TEXT_JUSTIFY_CENTER);
+		        dc.drawText(dc.getWidth() / 2, 118, Gfx.FONT_MEDIUM, "Info Available", Gfx.TEXT_JUSTIFY_CENTER);
+			} else {
+				dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+				dc.drawText(2, 89, Gfx.FONT_SMALL, "Pace:", Gfx.TEXT_JUSTIFY_LEFT);
+		        dc.drawText(dc.getWidth() - 2, 86, Gfx.FONT_MEDIUM, convertSpeedToPace(cursession.currentSpeed), Gfx.TEXT_JUSTIFY_RIGHT);
+	
+				dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+				dc.drawText(2, 121, Gfx.FONT_SMALL, "Distance:", Gfx.TEXT_JUSTIFY_LEFT);
+		        dc.drawText(dc.getWidth() - 2, 118, Gfx.FONT_MEDIUM, convertDistance(cursession.elapsedDistance), Gfx.TEXT_JUSTIFY_RIGHT);
+	        }
 		}
 		
 		if( !gpsIsOkay ) {
