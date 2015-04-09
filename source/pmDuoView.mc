@@ -146,20 +146,20 @@ class pmDuoView extends Ui.View {
 		result_sec = 0;
 		result_per = "/km";
 
-		if( speed != null ) {
-	    	//var settings = Sys.getDeviceSettings();
-	    	//var secpermetre = 1.0 / speed;	// speed = m/s
+		if( speed != null && speed > 0 ) {
+	    	var settings = Sys.getDeviceSettings();
+	    	var secpermetre = 1.0d / speed;	// speed = m/s
 
-	    	//if( settings.paceUnits == Sys.UNIT_METRIC ) {
-	    	//	result_sec = secpermetre * 1000.0;
-	    	//	result_per = "/km";
-	    	//} else {
-	    	//	result_sec = secpermetre * 1609.34;
-	    	//	result_per = "/mi";
-	    	//}
-			//result_min = result_sec / 60;
-			//result_min = result_min.format("%d").toNumber();
-			//result_sec = result_sec - ( result_min * 60 );	// Remove the exact minutes, should leave remainder seconds
+	    	if( settings.paceUnits == Sys.UNIT_METRIC ) {
+	    		result_sec = secpermetre * 1000.0d;
+	    		result_per = "/km";
+	    	} else {
+	    		result_sec = secpermetre * 1609.34d;
+	    		result_per = "/mi";
+	    	}
+			result_min = result_sec / 60;
+			result_min = result_min.format("%d").toNumber();
+			result_sec = result_sec - ( result_min * 60 );	// Remove the exact minutes, should leave remainder seconds
 		}
 		
     	return Lang.format("$1$:$2$$3$", [result_min, result_sec.format("%02d"), result_per]);
