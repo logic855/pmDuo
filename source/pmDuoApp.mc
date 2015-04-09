@@ -18,6 +18,11 @@ class pmDuoApp extends App.AppBase {
 	
 	var currentspeed;
 	var currentdistance;
+	
+	var times_total = 0;
+	var times_cycle = 0;
+	var times_trans = 0;
+	var times_run = 0;
 
     //! onStart() is called on application start up
     function onStart() {
@@ -102,6 +107,15 @@ class pmDuoApp extends App.AppBase {
     	if( session != null && session.isRecording() ) {
     		session.stop();
     		session.save();
+    		
+	    	var curtime = Sys.getTimer() - sessionstart;
+	    	if( step == 1 ) {
+	    		times_cycle = curtime;
+	    	} else if( step == 2 ) {
+	    		times_trans = curtime;
+	    	} else if( step == 3 ) {
+	    		times_run = curtime;
+	    	}
     	}
     	session = null;
     }
@@ -138,20 +152,31 @@ class pmDuoApp extends App.AppBase {
     }
     
     function getEventTime() {
-    	return msToTime(Sys.getTimer() - eventstart);
+    	if( step == 0 ) {
+    		times_total = 0; 
+    	} else if( step < 4 ) {
+    		times_total = Sys.getTimer() - eventstart;
+    	}
+    	return msToTime(times_total);
     }
     
     function getSessionTime() {
-    	return msToTime(Sys.getTimer() - sessionstart);
+    	var curtime = Sys.getTimer() - sessionstart;
+    	return msToTime(curtime);
+    }
+    
+    function getEventStepTime(step) {
+    	if( step == 1 ) {
+    		return msToTime(times_cycle);
+    	} else if( step == 2 ) {
+    		return msToTime(times_trans);
+    	} else if( step == 3 ) {
+    		return msToTime(times_run);
+    	}
+    	return "";
     }
     
     function msToTime(ms) {
-    	if( step == 0 ) {
-    		return "Ready";
-    	}
-    	if( step == 4 ) {
-    		return "Finished";
-    	}
     	var seconds = ms / 1000;
     	var minutes = ms / 60000;
     	var hours = ms / 3600000;

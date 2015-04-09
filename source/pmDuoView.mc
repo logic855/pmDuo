@@ -25,9 +25,11 @@ class pmDuoInputDelegate extends Ui.InputDelegate {
 class pmDuoView extends Ui.View {
 
 	var refreshtimer;
+	var blinkOn = 0;
 	
     function timercallback()
     {
+    	blinkOn = 1 - blinkOn;
         Ui.requestUpdate();
     }
 
@@ -43,10 +45,12 @@ class pmDuoView extends Ui.View {
 
     //! Update the view
     function onUpdate(dc) {
+    	var curapp = App.getApp();
+    
 		dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_BLACK);
 		dc.clear();
 		
-		dc.drawBitmap(2, 2, App.getApp().getSessionIcon());
+		dc.drawBitmap(2, 2, curapp.getSessionIcon());
 		
 		// Draw seperators
 		dc.drawLine(  0,  34, dc.getWidth(),  34 );
@@ -86,17 +90,17 @@ class pmDuoView extends Ui.View {
 		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
 		
 		dc.drawText(40, 2, Gfx.FONT_MEDIUM, "Event:", Gfx.TEXT_JUSTIFY_LEFT);
-        dc.drawText(dc.getWidth() - 2, 2, Gfx.FONT_MEDIUM, App.getApp().getEventTime(), Gfx.TEXT_JUSTIFY_RIGHT);
+        dc.drawText(dc.getWidth() - 2, 2, Gfx.FONT_MEDIUM, curapp.getEventTime(), Gfx.TEXT_JUSTIFY_RIGHT);
+        
+        dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
 
-		dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
-		dc.drawText(2, 57, Gfx.FONT_SMALL, "Discipline:", Gfx.TEXT_JUSTIFY_LEFT);
-        dc.drawText(dc.getWidth() - 2, 54, Gfx.FONT_MEDIUM, App.getApp().getSessionTime(), Gfx.TEXT_JUSTIFY_RIGHT);
-
-		if( App.getApp().isSessionActive() ) {
+		if( curapp.isSessionActive() ) {
+			
+			dc.drawText(2, 57, Gfx.FONT_SMALL, "Discipline:", Gfx.TEXT_JUSTIFY_LEFT);
+	        dc.drawText(dc.getWidth() - 2, 54, Gfx.FONT_MEDIUM, curapp.getSessionTime(), Gfx.TEXT_JUSTIFY_RIGHT);
 
 			var cursession = Act.getActivityInfo();
 			if( cursession == null ) {
-				dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
 		        dc.drawText(dc.getWidth() / 2, 86, Gfx.FONT_MEDIUM, "No Activity", Gfx.TEXT_JUSTIFY_CENTER);
 		        dc.drawText(dc.getWidth() / 2, 118, Gfx.FONT_MEDIUM, "Info Available", Gfx.TEXT_JUSTIFY_CENTER);
 			} else {
@@ -104,32 +108,61 @@ class pmDuoView extends Ui.View {
 				dc.drawText(2, 89, Gfx.FONT_SMALL, "Pace:", Gfx.TEXT_JUSTIFY_LEFT);
 		        dc.drawText(dc.getWidth() - 2, 86, Gfx.FONT_MEDIUM, convertSpeedToPace(cursession.currentSpeed), Gfx.TEXT_JUSTIFY_RIGHT);
 	
-				dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
 				dc.drawText(2, 121, Gfx.FONT_SMALL, "Distance:", Gfx.TEXT_JUSTIFY_LEFT);
 		        dc.drawText(dc.getWidth() - 2, 118, Gfx.FONT_MEDIUM, convertDistance(cursession.elapsedDistance), Gfx.TEXT_JUSTIFY_RIGHT);
 	        }
+		} else if( curapp.getSessionStep() == 4 ) {
+			dc.drawText(2, 57, Gfx.FONT_SMALL, "Cycle:", Gfx.TEXT_JUSTIFY_LEFT);
+	        dc.drawText(dc.getWidth() - 2, 54, Gfx.FONT_MEDIUM, curapp.getEventStepTime(1), Gfx.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(2, 89, Gfx.FONT_SMALL, "Transition:", Gfx.TEXT_JUSTIFY_LEFT);
+	        dc.drawText(dc.getWidth() - 2, 86, Gfx.FONT_MEDIUM, curapp.getEventStepTime(2), Gfx.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(2, 121, Gfx.FONT_SMALL, "Run:", Gfx.TEXT_JUSTIFY_LEFT);
+	        dc.drawText(dc.getWidth() - 2, 118, Gfx.FONT_MEDIUM, curapp.getEventStepTime(3), Gfx.TEXT_JUSTIFY_RIGHT);
 		}
 		
 		if( !gpsIsOkay ) {
 			// Draw "Wait for GPS"
-			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
-	        dc.drawText(dc.getWidth() / 2, 86, Gfx.FONT_MEDIUM, "Please Wait", Gfx.TEXT_JUSTIFY_CENTER);
-	        dc.drawText(dc.getWidth() / 2, 118, Gfx.FONT_MEDIUM, "For GPS", Gfx.TEXT_JUSTIFY_CENTER);
+			var boxh = (dc.getFontHeight(Gfx.FONT_MEDIUM) * 2) + 6;
+			
+			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
+			dc.fillRectangle(dc.getWidth() / 6, (dc.getHeight() / 2) - (boxh / 2), (dc.getWidth() / 6) * 4, boxh);
+			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
+			dc.drawRectangle(dc.getWidth() / 6, (dc.getHeight() / 2) - (boxh / 2), (dc.getWidth() / 6) * 4, boxh);
+
+			if( blinkOn == 0 ) {
+		        dc.drawText(dc.getWidth() / 2, (dc.getHeight() / 2) - dc.getFontHeight(Gfx.FONT_MEDIUM), Gfx.FONT_MEDIUM, "Please Wait", Gfx.TEXT_JUSTIFY_CENTER);
+		        dc.drawText(dc.getWidth() / 2, (dc.getHeight() / 2), Gfx.FONT_MEDIUM, "For GPS", Gfx.TEXT_JUSTIFY_CENTER);
+	        }
 		}
 
     }
     
     function convertSpeedToPace(speed) {
-    	var result;
+    	var result_min;
+    	var result_sec;
+    	var result_per;
     	
-		if( speed == null ) {
-			result = 0;
-		} else {
-			// Speed = m/s; DeviceSettings.paceUnits == UNIT_METRIC or UNIT_STATUTE
-			result = speed;
+		result_min = 0;
+		result_sec = 0;
+		result_per = "/km";
+
+		if( speed != null ) {
+	    	//var settings = Sys.getDeviceSettings();
+	    	//var secpermetre = 1.0 / speed;	// speed = m/s
+
+	    	//if( settings.paceUnits == Sys.UNIT_METRIC ) {
+	    	//	result_sec = secpermetre * 1000.0;
+	    	//	result_per = "/km";
+	    	//} else {
+	    	//	result_sec = secpermetre * 1609.34;
+	    	//	result_per = "/mi";
+	    	//}
+			//result_min = result_sec / 60;
+			//result_min = result_min.format("%d").toNumber();
+			//result_sec = result_sec - ( result_min * 60 );	// Remove the exact minutes, should leave remainder seconds
 		}
 		
-    	return Lang.format("$1$", [result.format("%.2f")]);
+    	return Lang.format("$1$:$2$$3$", [result_min, result_sec.format("%02d"), result_per]);
     }
     
     function convertDistance(metres) {
@@ -138,8 +171,8 @@ class pmDuoView extends Ui.View {
     	if( metres == null ) {
     		result = 0;
     	} else {
-	    	
-	    	if( Sys.getDeviceSettings().distanceUnits == UNIT_METRIC ) {
+	    	var settings = Sys.getDeviceSettings();
+	    	if( settings.distanceUnits == Sys.UNIT_METRIC ) {
 	    		result = metres / 1000.0;
 	    	} else {
 	    		result = metres / 1609.34;
