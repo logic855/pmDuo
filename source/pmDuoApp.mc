@@ -177,8 +177,8 @@ class pmDuoApp extends App.AppBase {
     }
     
     function msToTime(ms) {
-    	var seconds = ms / 1000;
-    	var minutes = ms / 60000;
+    	var seconds = (ms / 1000) % 60;
+    	var minutes = (ms / 60000) % 60;
     	var hours = ms / 3600000;
     	
     	return Lang.format("$1$:$2$.$3$", [hours, minutes.format("%02d"), seconds.format("%02d")]); 

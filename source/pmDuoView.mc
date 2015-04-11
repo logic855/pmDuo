@@ -118,6 +118,9 @@ class pmDuoView extends Ui.View {
 	        dc.drawText(dc.getWidth() - 2, 86, Gfx.FONT_MEDIUM, curapp.getEventStepTime(2), Gfx.TEXT_JUSTIFY_RIGHT);
 			dc.drawText(2, 121, Gfx.FONT_SMALL, "Run:", Gfx.TEXT_JUSTIFY_LEFT);
 	        dc.drawText(dc.getWidth() - 2, 118, Gfx.FONT_MEDIUM, curapp.getEventStepTime(3), Gfx.TEXT_JUSTIFY_RIGHT);
+		} else if( curapp.getSessionStep() == 0 ) {
+			dc.drawText(dc.getWidth() / 2, 57, Gfx.FONT_SMALL, "By Polymath Programming", Gfx.TEXT_JUSTIFY_CENTER);
+			dc.drawText(dc.getWidth() / 2, 89, Gfx.FONT_SMALL, "http://www.pmprog.co.uk", Gfx.TEXT_JUSTIFY_CENTER);
 		}
 		
 		if( !gpsIsOkay ) {
@@ -126,13 +129,14 @@ class pmDuoView extends Ui.View {
 			
 			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
 			dc.fillRectangle(dc.getWidth() / 6, (dc.getHeight() / 2) - (boxh / 2), (dc.getWidth() / 6) * 4, boxh);
-			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
+			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
 			dc.drawRectangle(dc.getWidth() / 6, (dc.getHeight() / 2) - (boxh / 2), (dc.getWidth() / 6) * 4, boxh);
 
 			if( blinkOn == 0 ) {
 		        dc.drawText(dc.getWidth() / 2, (dc.getHeight() / 2) - dc.getFontHeight(Gfx.FONT_MEDIUM), Gfx.FONT_MEDIUM, "Please Wait", Gfx.TEXT_JUSTIFY_CENTER);
 		        dc.drawText(dc.getWidth() / 2, (dc.getHeight() / 2), Gfx.FONT_MEDIUM, "For GPS", Gfx.TEXT_JUSTIFY_CENTER);
 	        }
+	        
 		}
 
     }
@@ -141,22 +145,22 @@ class pmDuoView extends Ui.View {
     	var result_min;
     	var result_sec;
     	var result_per;
+    	var conversionvalue;
+    	var settings = Sys.getDeviceSettings();
     	
 		result_min = 0;
 		result_sec = 0;
-		result_per = "/km";
+		if( settings.paceUnits == Sys.UNIT_METRIC ) {
+			result_per = "/km";
+			conversionvalue = 1000.0d;
+		} else {
+    		result_per = "/mi";
+    		conversionvalue = 1609.34d;
+    	}
 
 		if( speed != null && speed > 0 ) {
-	    	var settings = Sys.getDeviceSettings();
 	    	var secpermetre = 1.0d / speed;	// speed = m/s
-
-	    	if( settings.paceUnits == Sys.UNIT_METRIC ) {
-	    		result_sec = secpermetre * 1000.0d;
-	    		result_per = "/km";
-	    	} else {
-	    		result_sec = secpermetre * 1609.34d;
-	    		result_per = "/mi";
-	    	}
+	    	result_sec = secpermetre * conversionvalue;
 			result_min = result_sec / 60;
 			result_min = result_min.format("%d").toNumber();
 			result_sec = result_sec - ( result_min * 60 );	// Remove the exact minutes, should leave remainder seconds
